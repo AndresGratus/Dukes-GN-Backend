@@ -7,6 +7,7 @@ import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 @Getter
@@ -20,13 +21,13 @@ public class Program {
 
     private String name;
 
-    private DateTime start_date;
+    private LocalDateTime start_date;
 
-    private DateTime final_date;
+    private LocalDateTime final_date;
 
     private String id_coach;
 
-    private String name_coach
+    private String name_coach;
 
     private ArrayList<String> course;
 
