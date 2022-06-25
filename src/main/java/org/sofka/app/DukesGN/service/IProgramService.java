@@ -1,7 +1,6 @@
 package org.sofka.app.DukesGN.service;
 
-
-import org.sofka.app.DukesGN.collection.Program;
+import org.sofka.app.DukesGN.dto.ProgramDto;
 import reactor.core.publisher.Mono;
 
 public interface IProgramService {
@@ -9,24 +8,24 @@ public interface IProgramService {
     /**
      * Crear Programa
      *
-     * @param program
-     * @return Mono<Program>
+     * @param programDto
+     * @return Mono<ProgramDto>
      */
-    Mono<Program> createCourse(Program program);
+    Mono<ProgramDto> createCourse(ProgramDto programDto);
 
     /**
      * Mostrar Programa por Id
      *
      * @param id_program
-     * @return Mono<Program>
+     * @return Mono<ProgramDto>
      */
-    Mono<Program> getProgram(String id_program);
+    Mono<ProgramDto> getProgram(String id_program);
 
     /**
      * Eliminar un Programa por Id
      *
      * @param id_program
-     * @return Mono<Program>
+     * @return Mono<ProgramDto>
      */
-    Mono<Program> deleteProgram(String id_program);
+    Mono<ProgramDto> deleteProgram(String id_program);
 }
