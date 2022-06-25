@@ -6,12 +6,14 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.sofka.app.DukesGN.util.exception.ValidateArgument;
 import org.sofka.app.DukesGN.util.message.Messages;
+import org.springframework.data.annotation.Id;
 
 @Getter
 @Setter
 //@AllArgsConstructor
 @NoArgsConstructor
 public class ModuleDto {
+
     private String id_module;
     private String id_course;
     private String name;
