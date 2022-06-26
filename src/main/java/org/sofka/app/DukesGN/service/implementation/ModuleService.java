@@ -4,9 +4,10 @@ import org.sofka.app.DukesGN.repository.ModuleRepository;
 import org.sofka.app.DukesGN.service.IModuleService;
 import org.sofka.app.DukesGN.util.mapper.ModuleMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-
+@Service
 public class ModuleService implements IModuleService {
 
 
