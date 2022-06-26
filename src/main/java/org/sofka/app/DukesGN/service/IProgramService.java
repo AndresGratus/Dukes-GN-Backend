@@ -11,7 +11,7 @@ public interface IProgramService {
      * @param programDto
      * @return Mono<ProgramDto>
      */
-    Mono<ProgramDto> createCourse(ProgramDto programDto);
+    Mono<ProgramDto> createProgram(ProgramDto programDto);
 
     /**
      * Mostrar Programa por Id
@@ -27,5 +27,5 @@ public interface IProgramService {
      * @param id_program
      * @return Mono<ProgramDto>
      */
-    Mono<ProgramDto> deleteProgram(String id_program);
+    Mono<Void> deleteProgram(String id_program);
 }

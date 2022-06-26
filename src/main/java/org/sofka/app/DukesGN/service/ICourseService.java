@@ -36,7 +36,7 @@ public interface ICourseService {
      * @param id_course
      * @return Mono<CourseDto>
      */
-    Mono<CourseDto> deleteCourse(String id_course);
+    Mono<Void> deleteCourse(String id_course);
 
 
 }
