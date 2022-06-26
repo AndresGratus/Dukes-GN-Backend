@@ -1,6 +1,5 @@
 package org.sofka.app.DukesGN.service;
 
-import org.sofka.app.DukesGN.collection.Module;
 import org.sofka.app.DukesGN.dto.ModuleDto;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -19,26 +18,25 @@ public interface IModuleService {
      * @param id_module
      * @return Mono<ModuleDto>
      */
-    Mono<Module> getModule(String id_module);
+    Mono<ModuleDto> getModule(String id_module);
 
     /**
-     * Listar Módulos por el Id del Curso
-     * @param id_course
+     * Listar Módulos del Curso
      * @return Flux<ModuleDto>
      */
-    Flux<ModuleDto> listModules(String id_course);
+    Flux<ModuleDto> listModules();
 
     /**
      * Actualizar Módulo
      * @param id_module
      * @return Mono<ModuleDto>
      */
-    Mono<ModuleDto> updateModule(String id_module);
+    Mono<ModuleDto> updateModule(String id_module, ModuleDto moduleDto);
 
     /**
      * Eliminar Módulo por Id
      * @param id_module
      * @return Mono<ModuleDto>
      */
-    Mono<ModuleDto> deleteModule(String id_module);
+    Mono<Void> deleteModule(String id_module);
 }
