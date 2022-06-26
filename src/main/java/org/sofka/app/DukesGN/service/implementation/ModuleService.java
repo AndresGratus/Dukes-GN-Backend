@@ -10,10 +10,16 @@ import reactor.core.publisher.Mono;
 @Service
 public class ModuleService implements IModuleService {
 
-
+    /**
+     * Se inyecta el repositorio de de module
+     */
     @Autowired
     private ModuleRepository moduleRepository;
 
+
+    /**
+     * Se inyecta el module mapper
+     */
 
     private ModuleMapper moduleMapper;
 
