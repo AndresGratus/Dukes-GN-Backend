@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.sofka.app.DukesGN.util.exception.ValidateArgument;
 import org.sofka.app.DukesGN.util.message.Messages;
-import org.springframework.data.annotation.Id;
+
 
 @Getter
 @Setter

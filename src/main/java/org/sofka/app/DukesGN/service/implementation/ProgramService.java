@@ -24,6 +24,10 @@ public class ProgramService implements IProgramService {
 
     private ProgramMapper programMapper;
 
+    public ProgramService() {
+        this.programMapper = new ProgramMapper();
+    }
+
     /**
      * Servicio para crear un program
      *
@@ -54,12 +58,14 @@ public class ProgramService implements IProgramService {
 
     /**
      * Servicio de para obtener un program por id
+     *
      * @param id_program
      * @return Mono<Void>
      */
 
     @Override
     public Mono<Void> deleteProgram(String id_program) {
+
 
         return programRepository.deleteById(id_program);
     }

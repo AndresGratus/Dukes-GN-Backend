@@ -12,7 +12,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Document("module")
+@Document(collection = "modules")
 public class Module {
     @Id
     private String id_module;

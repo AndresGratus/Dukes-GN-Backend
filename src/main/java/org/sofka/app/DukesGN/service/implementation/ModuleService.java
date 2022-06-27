@@ -1,4 +1,5 @@
 package org.sofka.app.DukesGN.service.implementation;
+
 import org.sofka.app.DukesGN.dto.ModuleDto;
 import org.sofka.app.DukesGN.repository.ModuleRepository;
 import org.sofka.app.DukesGN.service.IModuleService;
@@ -7,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+
 @Service
 public class ModuleService implements IModuleService {
 
@@ -22,6 +24,10 @@ public class ModuleService implements IModuleService {
      */
 
     private ModuleMapper moduleMapper;
+
+    public ModuleService() {
+        this.moduleMapper = new ModuleMapper();
+    }
 
     /**
      * Servicio para crear un module
@@ -67,6 +73,7 @@ public class ModuleService implements IModuleService {
 
     /**
      * Servicio para actualizar un module por el id
+     *
      * @param id_module
      * @param moduleDto
      * @return Mono<ModuleDto>
@@ -88,6 +95,7 @@ public class ModuleService implements IModuleService {
 
     /**
      * Servicio para eliminar un module por id
+     *
      * @param id_module
      * @return Mono<Void>
      */

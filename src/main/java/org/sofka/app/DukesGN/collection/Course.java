@@ -13,7 +13,7 @@ import java.util.ArrayList;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Document("course")
+@Document(collection = "courses")
 public class Course {
     @Id
     private String id_course;
