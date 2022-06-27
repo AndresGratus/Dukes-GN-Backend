@@ -27,5 +27,5 @@ public interface IProgramService {
      * @param id_program
      * @return Mono<ProgramDto>
      */
-    Mono<String> deleteProgram(String id_program);
+    Mono<Void> deleteProgram(String id_program);
 }

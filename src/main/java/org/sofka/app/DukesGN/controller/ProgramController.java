@@ -76,7 +76,7 @@ public class ProgramController {
      */
 
     @DeleteMapping("/delete/{program_id}")
-    public Mono<ResponseEntity<Mono<String>>> deleteProgramById(@PathVariable("program_id") String program_id) {
+    public Mono<ResponseEntity<Mono<Void>>> deleteProgramById(@PathVariable("program_id") String program_id) {
         try {
             return Mono.just(
                     ResponseEntity

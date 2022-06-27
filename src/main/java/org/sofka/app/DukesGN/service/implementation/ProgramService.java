@@ -64,9 +64,9 @@ public class ProgramService implements IProgramService {
      */
 
     @Override
-    public Mono<String> deleteProgram(String id_program) {
-        programRepository.deleteById(id_program);
+    public Mono<Void> deleteProgram(String id_program) {
 
-        return Mono.just("El usuario con el id: " + id_program + " Fue eliminado con EXITO");
+
+        return programRepository.deleteById(id_program);
     }
 }
