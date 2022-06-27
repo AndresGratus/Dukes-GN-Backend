@@ -22,6 +22,9 @@ public class CourseService implements ICourseService {
      */
     private CourseMapper courseMapper;
 
+    public CourseService() {
+        this.courseMapper = new CourseMapper();
+    }
 
     /**
      * Servicio para crear un curso
