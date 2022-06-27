@@ -14,7 +14,7 @@ import java.util.ArrayList;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Document("program")
+@Document(collection = "programs")
 public class Program {
     @Id
     private String id_program;
