@@ -1,6 +1,7 @@
 package org.sofka.app.DukesGN.service;
 
 import org.sofka.app.DukesGN.dto.ProgramDto;
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 public interface IProgramService {
@@ -28,4 +29,13 @@ public interface IProgramService {
      * @return Mono<ProgramDto>
      */
     Mono<Void> deleteProgram(String id_program);
+
+    /**
+     * List todos los programas
+     *
+     * @return Flux<ProgramDto>
+     */
+    Flux<ProgramDto> listAllProgram();
+
+
 }
