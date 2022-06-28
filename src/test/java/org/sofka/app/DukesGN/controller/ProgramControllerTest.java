@@ -2,78 +2,76 @@ package org.sofka.app.DukesGN.controller;
 
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
-import org.sofka.app.DukesGN.dto.ModuleDto;
-import org.sofka.app.DukesGN.service.implementation.ModuleService;
+import org.sofka.app.DukesGN.dto.ProgramDto;
+import org.sofka.app.DukesGN.service.implementation.ProgramService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.reactive.WebFluxTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.reactive.server.WebTestClient;
 
-
 import static org.junit.jupiter.api.Assertions.*;
 
 @RunWith(SpringRunner.class)
-@WebFluxTest(ModuleController.class)
-class ModuleControllerTest {
+@WebFluxTest(ProgramController.class)
+class ProgramControllerTest {
 
     /**
-     * Se inyecta el webTestClient
+     * Se inyecta el WebTestClient
      */
 
     @Autowired
     private WebTestClient webTestClient;
 
-
     /**
-     * Se inyecta el servicio de Module
+     * Se inyecta el Servicio de program
      */
-
     @MockBean
-    private ModuleService moduleService;
+    private ProgramService programService;
 
 
     /**
-     * Test de obtener modulo por id
+     * Obtener Programa por id
      */
 
     @Test
-    void getModuleById() {
-
-        webTestClient.get().uri("/api/module/get/2")
+    void getProgramById() {
+        webTestClient.get().uri("/api/program/get/123")
                 .exchange()
                 .expectStatus()
                 .isOk()
-                .returnResult(ModuleDto.class)
+                .returnResult(ProgramDto.class)
                 .getResponseBody();
 
 
     }
 
     /**
-     * Test para listar todos los modulos
+     * Test para eliminar un programa
      */
 
     @Test
-    void listAllModule() {
+    void deleteProgramById() {
 
-        webTestClient.get().uri("/api/module/list")
-                .exchange()
-                .expectStatus()
-                .isOk()
-                .returnResult(ModuleDto.class)
-                .getResponseBody();
-    }
-
-    /**
-     * Test para eliminar un modulo por id
-     */
-
-    @Test
-    void deleteModuloById() {
-        webTestClient.delete().uri("/api/module/delete/2")
+        webTestClient.delete().uri("/api/program/delete/123")
                 .exchange()
                 .expectStatus()
                 .isOk();
+
+    }
+
+    /**
+     * Test para listar todos los programas
+     */
+
+    @Test
+    void listAllProgram() {
+
+        webTestClient.get().uri("/api/program/list")
+                .exchange()
+                .expectStatus()
+                .isOk()
+                .returnResult(ProgramDto.class)
+                .getResponseBody();
     }
 }
