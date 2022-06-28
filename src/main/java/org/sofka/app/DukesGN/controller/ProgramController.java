@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @CrossOrigin("*")
@@ -87,6 +88,27 @@ public class ProgramController {
             throw new RuntimeException("No se pudo eliminar el programa");
         }
 
+    }
+
+
+    /**
+     * Endpoint para listar todos los programas
+     *
+     * @return Mono<ResponseEntity < Flux < ProgramDto>>>
+     */
+
+    @GetMapping("/list")
+    public Mono<ResponseEntity<Flux<ProgramDto>>> listAllProgram() {
+        try {
+            return Mono.just(
+                    ResponseEntity
+                            .ok()
+                            .contentType(MediaType.APPLICATION_JSON)
+                            .body(programService.listAllProgram())
+            );
+        } catch (Exception e) {
+            throw new RuntimeException("No se puede listar todos los programas");
+        }
     }
 
 

@@ -6,6 +6,7 @@ import org.sofka.app.DukesGN.service.IProgramService;
 import org.sofka.app.DukesGN.util.mapper.ProgramMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @Service
@@ -68,5 +69,20 @@ public class ProgramService implements IProgramService {
 
 
         return programRepository.deleteById(id_program);
+    }
+
+    /**
+     * Servicio para listar todos los program
+     *
+     * @return Flux<ProgramDto>
+     */
+
+    @Override
+    public Flux<ProgramDto> listAllProgram() {
+        return programRepository
+                .findAll()
+                .map(program -> programMapper
+                        .fromProgramtoProgramDto()
+                        .apply(program));
     }
 }
