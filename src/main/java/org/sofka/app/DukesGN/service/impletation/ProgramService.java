@@ -40,6 +40,7 @@ public class ProgramService implements IProgramService {
     @Override
     public Mono<ProgramDto> createProgram(ProgramDto programDto) {
         programDto.setFinal_date(programDto.getStart_date().plusDays(programDto.getDuration_day()));
+        programDto.setCourse_percentage(100/programDto.getCourse_amount());
         return programRepository
                 .save(programMapper
                         .fromProgramDtoToProgram()
