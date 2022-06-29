@@ -18,6 +18,7 @@ public class CourseMapper {
             courseDto.setId_course(course.getId_course());
             courseDto.setId_program(course.getId_program());
             courseDto.setName(course.getName());
+            courseDto.setPercentage(course.getPercentage());
             return courseDto;
         };
     }
@@ -33,6 +34,7 @@ public class CourseMapper {
             course.setId_course(courseDto.getId_course());
             course.setId_program(courseDto.getId_program());
             course.setName(courseDto.getName());
+            course.setPercentage(courseDto.getPercentage());
             return course;
         };
     }

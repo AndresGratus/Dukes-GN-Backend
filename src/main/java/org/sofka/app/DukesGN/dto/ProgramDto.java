@@ -30,11 +30,15 @@ public class ProgramDto {
 
     private Long duration_day;
 
+    private Double course_amount;
+
+    private Double course_percentage;
+
     private ArrayList<String> course;
 
     private ArrayList<String> apprentice;
 
-    public ProgramDto(String id_program, String name, LocalDate start_date, LocalDate final_date, String id_coach, String name_coach,Long duration_day, ArrayList<String> course, ArrayList<String> apprentice) {
+    public ProgramDto(String id_program, String name, LocalDate start_date, LocalDate final_date, String id_coach, String name_coach, Long duration_day, Double course_amount, Double course_percentage, ArrayList<String> course, ArrayList<String> apprentice) {
         ValidateArgument.validateStringNull(this.id_program, Messages.ID_PROGRAMA_NULO);
         this.id_program = id_program;
 
@@ -51,6 +55,11 @@ public class ProgramDto {
         this.name_coach = name_coach;
 
         this.duration_day = duration_day;
+
+        this.course_amount = course_amount;
+
+        this.course_percentage = course_percentage;
+
 
         this.course = course;
         this.apprentice = apprentice;

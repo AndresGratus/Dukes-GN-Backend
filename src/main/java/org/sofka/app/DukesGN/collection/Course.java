@@ -19,6 +19,7 @@ public class Course {
     private String id_course;
     private String id_program;
     private String name;
+    private Double Percentage;
     private ArrayList<String> modules;
 
 

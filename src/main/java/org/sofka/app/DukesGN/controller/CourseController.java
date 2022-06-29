@@ -109,6 +109,13 @@ public class CourseController {
 
     }
 
+    /**
+     * Endpoint para listar los course por id
+     *
+     * @param id_program
+     * @return Mono<ResponseEntity < Flux < CourseDto>>>
+     */
+
     @GetMapping("/program/{id_program}")
     public Mono<ResponseEntity<Flux<CourseDto>>> getCourseByIdProgram(@PathVariable("id_program") String id_program) {
         try {

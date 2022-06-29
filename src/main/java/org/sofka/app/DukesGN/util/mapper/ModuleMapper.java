@@ -21,6 +21,7 @@ public class ModuleMapper {
             moduleDto.setName(module.getName());
             moduleDto.setScore(module.getScore());
             moduleDto.setPercentage(module.getPercentage());
+            moduleDto.setDuration(module.getDuration());
             return moduleDto;
         };
     }
@@ -38,6 +39,7 @@ public class ModuleMapper {
             module.setName(moduleDto.getName());
             module.setScore(moduleDto.getScore());
             module.setPercentage(moduleDto.getPercentage());
+            module.setDuration(moduleDto.getDuration());
             return module;
         };
     }
