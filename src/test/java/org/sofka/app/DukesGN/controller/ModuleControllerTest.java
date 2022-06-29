@@ -32,15 +32,15 @@ class ModuleControllerTest {
     /**
      * Crear Modulo
      */
-    @Test
-    void createModule(){
-        webTestClient.post().uri("/api/module/create")
-                .contentType(MediaType.APPLICATION_JSON_UTF8)
-                .syncBody("{}")
-                .exchange()
-                .expectStatus().isOk()
-                .expectBody().isEmpty();
-    }
+//    @Test
+//    void createModule(){
+//        webTestClient.post().uri("/api/module/create")
+//                .contentType(MediaType.APPLICATION_JSON_UTF8)
+//                .syncBody("{}")
+//                .exchange()
+//                .expectStatus().isOk()
+//                .expectBody().isEmpty();
+    //  }
 
     /**
      * Test de obtener modulo por id
