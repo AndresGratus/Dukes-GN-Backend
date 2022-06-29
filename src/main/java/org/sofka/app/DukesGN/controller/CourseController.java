@@ -10,6 +10,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import java.util.List;
+import java.util.Objects;
 
 @CrossOrigin("*")
 @RestController
@@ -104,6 +105,22 @@ public class CourseController {
                     );
         } catch (Exception e) {
             throw new RuntimeException("No se pudo gurdar la lista de course");
+        }
+
+    }
+
+    @GetMapping("/program/{id_program}")
+    public Mono<ResponseEntity<Flux<CourseDto>>> getCourseByIdProgram(@PathVariable("id_program") String id_program) {
+        try {
+            return Mono.just(
+                    ResponseEntity
+                            .ok()
+                            .contentType(MediaType.APPLICATION_JSON)
+                            .body(courseService.listCourses()
+                                    .filter(courseDto -> Objects.equals(courseDto.getId_program(), id_program)))
+            );
+        } catch (Exception e) {
+            throw new RuntimeException("No se pudo listar los cursos por el id del programa");
         }
 
     }

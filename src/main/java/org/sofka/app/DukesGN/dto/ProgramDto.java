@@ -28,11 +28,13 @@ public class ProgramDto {
 
     private String name_coach;
 
+    private Long duration_day;
+
     private ArrayList<String> course;
 
     private ArrayList<String> apprentice;
 
-    public ProgramDto(String id_program, String name, LocalDate start_date, LocalDate final_date, String id_coach, String name_coach, ArrayList<String> course, ArrayList<String> apprentice) {
+    public ProgramDto(String id_program, String name, LocalDate start_date, LocalDate final_date, String id_coach, String name_coach,Long duration_day, ArrayList<String> course, ArrayList<String> apprentice) {
         ValidateArgument.validateStringNull(this.id_program, Messages.ID_PROGRAMA_NULO);
         this.id_program = id_program;
 
@@ -47,6 +49,8 @@ public class ProgramDto {
 
         ValidateArgument.validateStringNull(this.name_coach, Messages.NOMBRE_COACH_VACIO);
         this.name_coach = name_coach;
+
+        this.duration_day = duration_day;
 
         this.course = course;
         this.apprentice = apprentice;

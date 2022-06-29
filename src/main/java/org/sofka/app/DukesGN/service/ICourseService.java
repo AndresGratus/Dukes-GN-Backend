@@ -27,10 +27,9 @@ public interface ICourseService {
     /**
      * Listar Cursos por Id del Coach
      *
-     * @param id_coach
      * @return Flux<CourseDto>
      */
-    Flux<CourseDto> listCourses(String id_coach);
+    Flux<CourseDto> listCourses();
 
     /**
      * Eliminar un Curso por Id

@@ -20,6 +20,7 @@ public class ProgramMapper {
             programDto.setFinal_date(program.getFinal_date());
             programDto.setId_coach(program.getId_coach());
             programDto.setName_coach(program.getName_coach());
+            programDto.setDuration_day(program.getDuration_day());
 
             return programDto;
         };
@@ -41,6 +42,7 @@ public class ProgramMapper {
             program.setFinal_date(programDto.getFinal_date());
             program.setId_coach(programDto.getId_coach());
             program.setName_coach(programDto.getName_coach());
+            program.setDuration_day(programDto.getDuration_day());
 
             return program;
         };

@@ -10,6 +10,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import java.util.List;
+import java.util.Objects;
 
 @CrossOrigin("*")
 @RestController
@@ -114,7 +115,6 @@ public class ProgramController {
     }
 
     /**
-     *
      * @param programDtos
      * @return
      */
@@ -131,6 +131,27 @@ public class ProgramController {
             );
         } catch (Exception e) {
             throw new RuntimeException("No se pudo guardar la lista de Program");
+        }
+
+    }
+
+    @GetMapping("/coach/{id_coach}")
+    public Mono<ResponseEntity<Flux<ProgramDto>>> getProgramByIdCoach(@PathVariable("id_coach") String id_coach) {
+
+        try {
+            return Mono.just(
+                    ResponseEntity
+                            .ok()
+                            .contentType(MediaType.APPLICATION_JSON)
+                            .body(programService
+                                    .listAllProgram()
+                                    .filter(programDto -> Objects.equals(programDto.getId_coach(), id_coach)))
+
+            );
+
+        } catch (Exception e) {
+            throw new RuntimeException("No se pudo listar los programas por el id del coach");
+
         }
 
     }

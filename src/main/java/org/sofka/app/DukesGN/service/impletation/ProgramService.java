@@ -39,6 +39,7 @@ public class ProgramService implements IProgramService {
      */
     @Override
     public Mono<ProgramDto> createProgram(ProgramDto programDto) {
+        programDto.setFinal_date(programDto.getStart_date().plusDays(programDto.getDuration_day()));
         return programRepository
                 .save(programMapper
                         .fromProgramDtoToProgram()
@@ -90,6 +91,7 @@ public class ProgramService implements IProgramService {
 
     /**
      * Servicio para guardar una lista de program
+     *
      * @param listProgram
      * @return
      */

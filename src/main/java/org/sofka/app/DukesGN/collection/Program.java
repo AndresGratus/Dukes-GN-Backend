@@ -30,6 +30,8 @@ public class Program {
 
     private String name_coach;
 
+    private Long duration_day;
+
     private ArrayList<String> course;
 
     private ArrayList<String> apprentice;

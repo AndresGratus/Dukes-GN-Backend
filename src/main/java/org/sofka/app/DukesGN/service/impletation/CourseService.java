@@ -58,9 +58,17 @@ public class CourseService implements ICourseService {
                         .fromCourseToCourseDto());
     }
 
+    /**
+     * Servicio para listar los course
+     * @return Flux<CourseDto>
+     */
+
     @Override
-    public Flux<CourseDto> listCourses(String id_coach) {
-        return null;
+    public Flux<CourseDto> listCourses() {
+        return courseRepository.findAll()
+                .map(course -> courseMapper
+                        .fromCourseToCourseDto()
+                        .apply(course));
     }
 
     /**
