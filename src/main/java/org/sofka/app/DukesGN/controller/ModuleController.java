@@ -11,6 +11,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import java.util.List;
+import java.util.Objects;
 
 @CrossOrigin("*")
 @RestController
@@ -144,6 +145,28 @@ public class ModuleController {
         } catch (Exception e) {
             throw new RuntimeException("No se pudo guardar la lista de module");
 
+        }
+
+    }
+
+    /**
+     * Endpoint para listar modules por id
+     *
+     * @param id_course
+     * @return Mono<ResponseEntity < Flux < ModuleDto>>>
+     */
+    @GetMapping("/course/{id_course}")
+    public Mono<ResponseEntity<Flux<ModuleDto>>> getModulesByIdCurso(@PathVariable("id_course") String id_course) {
+        try {
+            return Mono.just(
+                    ResponseEntity
+                            .ok()
+                            .contentType(MediaType.APPLICATION_JSON)
+                            .body(moduleService.listModules()
+                                    .filter(moduleDto -> Objects.equals(moduleDto.getId_course(), id_course)))
+            );
+        } catch (Exception e) {
+            throw new RuntimeException("No se pudo lsitar los modulos por el id del curso");
         }
 
     }
