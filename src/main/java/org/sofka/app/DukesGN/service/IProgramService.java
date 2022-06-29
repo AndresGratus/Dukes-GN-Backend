@@ -4,6 +4,8 @@ import org.sofka.app.DukesGN.dto.ProgramDto;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.util.List;
+
 public interface IProgramService {
 
     /**
@@ -36,6 +38,13 @@ public interface IProgramService {
      * @return Flux<ProgramDto>
      */
     Flux<ProgramDto> listAllProgram();
+
+    /**
+     * Guadar una lista de programas
+     * @param listProgram
+     * @return Flux<List<ProgramDto>>
+     */
+    Flux<List<ProgramDto>> saveAllProgram(List<ProgramDto> listProgram);
 
 
 }

@@ -1,13 +1,15 @@
 package org.sofka.app.DukesGN.controller;
 
 import org.sofka.app.DukesGN.dto.ProgramDto;
-import org.sofka.app.DukesGN.service.ProgramService;
+import org.sofka.app.DukesGN.service.impletation.ProgramService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+
+import java.util.List;
 
 @CrossOrigin("*")
 @RestController
@@ -109,6 +111,28 @@ public class ProgramController {
         } catch (Exception e) {
             throw new RuntimeException("No se puede listar todos los programas");
         }
+    }
+
+    /**
+     *
+     * @param programDtos
+     * @return
+     */
+
+    @PostMapping("/saveAll")
+    public Mono<ResponseEntity<Flux<List<ProgramDto>>>> saveAllProgram(@RequestBody List<ProgramDto> programDtos) {
+
+        try {
+            return Mono.just(
+                    ResponseEntity
+                            .ok()
+                            .contentType(MediaType.APPLICATION_JSON)
+                            .body(programService.saveAllProgram(programDtos))
+            );
+        } catch (Exception e) {
+            throw new RuntimeException("No se pudo guardar la lista de Program");
+        }
+
     }
 
 

@@ -2,13 +2,15 @@ package org.sofka.app.DukesGN.controller;
 
 
 import org.sofka.app.DukesGN.dto.ModuleDto;
-import org.sofka.app.DukesGN.service.ModuleService;
+import org.sofka.app.DukesGN.service.impletation.ModuleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+
+import java.util.List;
 
 @CrossOrigin("*")
 @RestController
@@ -120,6 +122,28 @@ public class ModuleController {
             );
         } catch (Exception e) {
             throw new RuntimeException("Se pudo eliminar el modulo");
+        }
+
+    }
+
+    /**
+     * Endpoint para guardar una lista de modules
+     *
+     * @return Mono<ResponseEntity < Flux < List < ModuleDto>>>>
+     */
+    @PostMapping("/saveAll")
+    public Mono<ResponseEntity<Flux<List<ModuleDto>>>> saveAllModule(@RequestBody List<ModuleDto> list) {
+        try {
+            return Mono.just(
+                    ResponseEntity
+                            .ok()
+                            .contentType(MediaType.APPLICATION_JSON)
+                            .body(moduleService.saveAllModule(list))
+
+            );
+        } catch (Exception e) {
+            throw new RuntimeException("No se pudo guardar la lista de module");
+
         }
 
     }

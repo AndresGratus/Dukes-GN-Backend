@@ -1,4 +1,4 @@
-package org.sofka.app.DukesGN.service;
+package org.sofka.app.DukesGN.service.impletation;
 
 import org.sofka.app.DukesGN.dto.CourseDto;
 import org.sofka.app.DukesGN.repository.CourseRepository;
@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+
+import java.util.List;
 
 @Service
 public class CourseService implements ICourseService {
@@ -63,6 +65,7 @@ public class CourseService implements ICourseService {
 
     /**
      * Servicio para eliminar un course
+     *
      * @param id_course
      * @return Mono<Void>
      */
@@ -70,5 +73,10 @@ public class CourseService implements ICourseService {
     public Mono<Void> deleteCourse(String id_course) {
         return courseRepository
                 .deleteById(id_course);
+    }
+
+    @Override
+    public Flux<List<CourseDto>> saveAllCourse(List<CourseDto> courseDtoList) {
+        return courseRepository.saveAll(courseDtoList);
     }
 }

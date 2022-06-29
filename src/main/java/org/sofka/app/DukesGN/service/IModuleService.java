@@ -4,6 +4,8 @@ import org.sofka.app.DukesGN.dto.ModuleDto;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.util.List;
+
 public interface IModuleService {
 
     /**
@@ -39,4 +41,14 @@ public interface IModuleService {
      * @return Mono<ModuleDto>
      */
     Mono<Void> deleteModule(String id_module);
+
+    /**
+     *
+     * Guardar una lista de modulos
+     * @param moduleDtoList
+     * @return Flux<List<ModuleDto>>
+     */
+
+    Flux<List<ModuleDto>> saveAllModule(List<ModuleDto> moduleDtoList);
+
 }
