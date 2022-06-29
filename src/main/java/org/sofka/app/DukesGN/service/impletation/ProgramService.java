@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.util.List;
+
 @Service
 public class ProgramService implements IProgramService {
 
@@ -84,5 +86,16 @@ public class ProgramService implements IProgramService {
                 .map(program -> programMapper
                         .fromProgramtoProgramDto()
                         .apply(program));
+    }
+
+    /**
+     * Servicio para guardar una lista de program
+     * @param listProgram
+     * @return
+     */
+
+    @Override
+    public Flux<List<ProgramDto>> saveAllProgram(List<ProgramDto> listProgram) {
+        return programRepository.saveAll(listProgram);
     }
 }

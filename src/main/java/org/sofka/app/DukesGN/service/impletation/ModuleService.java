@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.util.List;
+
 @Service
 public class ModuleService implements IModuleService {
 
@@ -103,5 +105,17 @@ public class ModuleService implements IModuleService {
     @Override
     public Mono<Void> deleteModule(String id_module) {
         return moduleRepository.deleteById(id_module);
+    }
+
+
+    /**
+     * Servicio para guardar una lista de module
+     * @param moduleDtoList
+     * @return
+     */
+
+    @Override
+    public Flux<List<ModuleDto>> saveAllModule(List<ModuleDto> moduleDtoList) {
+        return moduleRepository.saveAll(moduleDtoList);
     }
 }

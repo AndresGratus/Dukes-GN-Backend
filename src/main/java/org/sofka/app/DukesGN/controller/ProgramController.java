@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.util.List;
+
 @CrossOrigin("*")
 @RestController
 @RequestMapping("/api/program")
@@ -109,6 +111,28 @@ public class ProgramController {
         } catch (Exception e) {
             throw new RuntimeException("No se puede listar todos los programas");
         }
+    }
+
+    /**
+     *
+     * @param programDtos
+     * @return
+     */
+
+    @PostMapping("/saveAll")
+    public Mono<ResponseEntity<Flux<List<ProgramDto>>>> saveAllProgram(@RequestBody List<ProgramDto> programDtos) {
+
+        try {
+            return Mono.just(
+                    ResponseEntity
+                            .ok()
+                            .contentType(MediaType.APPLICATION_JSON)
+                            .body(programService.saveAllProgram(programDtos))
+            );
+        } catch (Exception e) {
+            throw new RuntimeException("No se pudo guardar la lista de Program");
+        }
+
     }
 
 
