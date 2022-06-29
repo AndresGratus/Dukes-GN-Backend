@@ -2,7 +2,7 @@ package org.sofka.app.DukesGN.controller;
 
 
 import org.sofka.app.DukesGN.dto.ModuleDto;
-import org.sofka.app.DukesGN.service.ModuleService;
+import org.sofka.app.DukesGN.service.impletation.ModuleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

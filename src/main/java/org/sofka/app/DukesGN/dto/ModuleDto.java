@@ -20,6 +20,8 @@ public class ModuleDto {
     private Double score;
     private Double percentage;
 
+
+
     public ModuleDto(String id_module, String id_course, String name, Double score, Double percentage) {
         ValidateArgument.validateStringNull(this.id_module, Messages.ID_MODULO_NULO);
         this.id_module = id_module;

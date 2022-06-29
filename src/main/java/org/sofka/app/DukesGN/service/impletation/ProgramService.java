@@ -1,4 +1,4 @@
-package org.sofka.app.DukesGN.service;
+package org.sofka.app.DukesGN.service.impletation;
 
 import org.sofka.app.DukesGN.dto.ProgramDto;
 import org.sofka.app.DukesGN.repository.ProgramRepository;
