@@ -20,9 +20,10 @@ public class ModuleDto {
     private Double score;
     private Double percentage;
 
+    private Long duration;
 
 
-    public ModuleDto(String id_module, String id_course, String name, Double score, Double percentage) {
+    public ModuleDto(String id_module, String id_course, String name, Double score, Double percentage, Long duration) {
         ValidateArgument.validateStringNull(this.id_module, Messages.ID_MODULO_NULO);
         this.id_module = id_module;
 
@@ -39,5 +40,7 @@ public class ModuleDto {
         ValidateArgument.valiteNumberNegative(this.percentage, Messages.VALOR_PORCENTAJE_MINIMO);
         ValidateArgument.validateNumberMax(this.percentage, Messages.VALOR_PORCENTAJE_MAXIMO);
         this.percentage = percentage;
+
+        this.duration = duration;
     }
 }

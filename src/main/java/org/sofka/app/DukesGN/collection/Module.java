@@ -20,4 +20,5 @@ public class Module {
     private String name;
     private Double score;
     private Double percentage;
+    private Long duration;
 }
