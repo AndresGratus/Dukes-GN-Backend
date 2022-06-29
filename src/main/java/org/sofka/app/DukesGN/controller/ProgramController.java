@@ -136,7 +136,7 @@ public class ProgramController {
     }
 
     @GetMapping("/coach/{id_coach}")
-    public Mono<ResponseEntity<Flux<ProgramDto>>> getPrograByIdCoach(@PathVariable("id_coach") String id_coach) {
+    public Mono<ResponseEntity<Flux<ProgramDto>>> getProgramByIdCoach(@PathVariable("id_coach") String id_coach) {
 
         try {
             return Mono.just(
