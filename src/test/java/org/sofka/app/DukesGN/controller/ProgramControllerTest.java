@@ -3,14 +3,13 @@ package org.sofka.app.DukesGN.controller;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.sofka.app.DukesGN.dto.ProgramDto;
-import org.sofka.app.DukesGN.service.implementation.ProgramService;
+import org.sofka.app.DukesGN.service.ProgramService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.reactive.WebFluxTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.reactive.server.WebTestClient;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @RunWith(SpringRunner.class)
 @WebFluxTest(ProgramController.class)
@@ -29,6 +28,26 @@ class ProgramControllerTest {
     @MockBean
     private ProgramService programService;
 
+    /**
+     * Crear Programa
+     */
+    @Test
+    void createProgram(){
+        webTestClient.post().uri("/api/program/create")
+                .contentType(MediaType.APPLICATION_JSON_UTF8)
+                .syncBody("{\n" +
+                        "    \"id_program\":\"232\",\n" +
+                        "    \"name\": \"entrenamiento1\",\n" +
+                        "    \"start_date\": \"\",\n" +
+                        "    \"final_date\": \"\",\n" +
+                        "    \"id_coach\": \"5\",\n" +
+                        "    \"name_coach\": \"3\"\n" +
+                        "}")
+                .exchange()
+                .expectStatus().isOk()
+                .expectBody().isEmpty();
+    }
+
 
     /**
      * Obtener Programa por id
@@ -42,7 +61,6 @@ class ProgramControllerTest {
                 .isOk()
                 .returnResult(ProgramDto.class)
                 .getResponseBody();
-
 
     }
 

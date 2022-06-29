@@ -1,7 +1,7 @@
 package org.sofka.app.DukesGN.controller;
 
 import org.sofka.app.DukesGN.dto.CourseDto;
-import org.sofka.app.DukesGN.service.implementation.CourseService;
+import org.sofka.app.DukesGN.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
