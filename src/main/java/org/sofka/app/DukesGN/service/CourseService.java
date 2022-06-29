@@ -1,4 +1,4 @@
-package org.sofka.app.DukesGN.service.implementation;
+package org.sofka.app.DukesGN.service;
 
 import org.sofka.app.DukesGN.dto.CourseDto;
 import org.sofka.app.DukesGN.repository.CourseRepository;
