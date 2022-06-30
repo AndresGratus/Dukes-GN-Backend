@@ -1,7 +1,7 @@
 package org.sofka.app.DukesGN.util.mapper;
 
-import org.sofka.app.DukesGN.dto.ModuleDto;
 import org.sofka.app.DukesGN.collection.Module;
+import org.sofka.app.DukesGN.dto.ModuleDto;
 
 import java.util.function.Function;
 
