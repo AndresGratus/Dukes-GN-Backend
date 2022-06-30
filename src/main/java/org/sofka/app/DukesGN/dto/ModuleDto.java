@@ -18,7 +18,6 @@ public class ModuleDto {
     private String name;
     private Double score;
     private Double percentage;
-
     private Long duration;
 
 
