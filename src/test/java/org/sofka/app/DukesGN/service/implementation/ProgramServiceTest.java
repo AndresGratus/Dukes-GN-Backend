@@ -22,16 +22,25 @@ import static org.mockito.Mockito.*;
 @SpringBootTest
 class ProgramServiceTest {
 
+    /**
+     * Se inyecta el Servicio de programa
+     */
     @Autowired
     ProgramService programService;
 
-    ProgramMapper programMapper;
+    /**
+     * Se instancia el Mapper de Programa
+     */
+    ProgramMapper programMapper = new ProgramMapper();
 
     @BeforeEach
     void setUp() {
         programService = mock(ProgramService.class);
     }
 
+    /**
+     * Crear Programa
+     */
     @Test
     void createProgram() {
 
@@ -46,18 +55,7 @@ class ProgramServiceTest {
         program.setCourse_amount(4D);
         program.setCourse_percentage(25D);
 
-        //var programDto1 = programMapper.fromProgramtoProgramDto().apply(program);
-
-        var programDto = new ProgramDto();
-        programDto.setId_program(program.getId_program());
-        programDto.setName(program.getName());
-        programDto.setStart_date(program.getStart_date());
-        programDto.setFinal_date(program.getFinal_date());
-        programDto.setId_coach(program.getId_program());
-        programDto.setName_coach(program.getName_coach());
-        programDto.setDuration_day(program.getDuration_day());
-        programDto.setCourse_amount(program.getCourse_amount());
-        programDto.setCourse_percentage(program.getCourse_percentage());
+        var programDto = programMapper.fromProgramtoProgramDto().apply(program);
 
         when(programService.createProgram(programDto))
                 .thenReturn(Mono.just(programDto));
@@ -70,6 +68,9 @@ class ProgramServiceTest {
         verify(programService).createProgram(programDto);
     }
 
+    /**
+     * Obtener Programa por id
+     */
     @Test
     void getProgram() {
 
@@ -84,16 +85,7 @@ class ProgramServiceTest {
         program.setCourse_amount(4D);
         program.setCourse_percentage(25D);
 
-        var programDto = new ProgramDto();
-        programDto.setId_program(program.getId_program());
-        programDto.setName(program.getName());
-        programDto.setStart_date(program.getStart_date());
-        programDto.setFinal_date(program.getFinal_date());
-        programDto.setId_coach(program.getId_program());
-        programDto.setName_coach(program.getName_coach());
-        programDto.setDuration_day(program.getDuration_day());
-        programDto.setCourse_amount(program.getCourse_amount());
-        programDto.setCourse_percentage(program.getCourse_percentage());
+        var programDto = programMapper.fromProgramtoProgramDto().apply(program);
 
         when(programService.getProgram(programDto.getId_program()))
                 .thenReturn(Mono.just(programDto));
@@ -105,7 +97,9 @@ class ProgramServiceTest {
 
         verify(programService).getProgram(programDto.getId_program());
     }
-
+    /**
+     * Test para eliminar un programa
+     */
     @Test
     void deleteProgram() {
 
@@ -120,16 +114,7 @@ class ProgramServiceTest {
         program.setCourse_amount(4D);
         program.setCourse_percentage(25D);
 
-        var programDto = new ProgramDto();
-        programDto.setId_program(program.getId_program());
-        programDto.setName(program.getName());
-        programDto.setStart_date(program.getStart_date());
-        programDto.setFinal_date(program.getFinal_date());
-        programDto.setId_coach(program.getId_program());
-        programDto.setName_coach(program.getName_coach());
-        programDto.setDuration_day(program.getDuration_day());
-        programDto.setCourse_amount(program.getCourse_amount());
-        programDto.setCourse_percentage(program.getCourse_percentage());
+        var programDto = programMapper.fromProgramtoProgramDto().apply(program);
 
         when(programService.deleteProgram(programDto.getId_program()))
                 .thenReturn(Mono.empty());
@@ -142,6 +127,9 @@ class ProgramServiceTest {
         verify(programService).deleteProgram(programDto.getId_program());
     }
 
+    /**
+     * Test para listar todos los programas
+     */
     @Test
     void listAllProgram() {
 
@@ -156,16 +144,7 @@ class ProgramServiceTest {
         program.setCourse_amount(4D);
         program.setCourse_percentage(25D);
 
-        var programDto = new ProgramDto();
-        programDto.setId_program(program.getId_program());
-        programDto.setName(program.getName());
-        programDto.setStart_date(program.getStart_date());
-        programDto.setFinal_date(program.getFinal_date());
-        programDto.setId_coach(program.getId_program());
-        programDto.setName_coach(program.getName_coach());
-        programDto.setDuration_day(program.getDuration_day());
-        programDto.setCourse_amount(program.getCourse_amount());
-        programDto.setCourse_percentage(program.getCourse_percentage());
+        var programDto = programMapper.fromProgramtoProgramDto().apply(program);
 
         when(programService.listAllProgram()).thenReturn(Flux.just());
 
@@ -180,6 +159,9 @@ class ProgramServiceTest {
         verify(programService).listAllProgram();
     }
 
+    /**
+     * Test para guardar todos los programas
+     */
     @Test
     void saveAllProgram() {
 
@@ -194,16 +176,7 @@ class ProgramServiceTest {
         program1.setCourse_amount(4D);
         program1.setCourse_percentage(25D);
 
-        var program1Dto = new ProgramDto();
-        program1Dto.setId_program(program1.getId_program());
-        program1Dto.setName(program1.getName());
-        program1Dto.setStart_date(program1.getStart_date());
-        program1Dto.setFinal_date(program1.getFinal_date());
-        program1Dto.setId_coach(program1.getId_program());
-        program1Dto.setName_coach(program1.getName_coach());
-        program1Dto.setDuration_day(program1.getDuration_day());
-        program1Dto.setCourse_amount(program1.getCourse_amount());
-        program1Dto.setCourse_percentage(program1.getCourse_percentage());
+        var program1Dto = programMapper.fromProgramtoProgramDto().apply(program1);
 
         var program2 = new Program();
         program2.setId_program("P-0001");
@@ -216,16 +189,7 @@ class ProgramServiceTest {
         program2.setCourse_amount(4D);
         program2.setCourse_percentage(25D);
 
-        var program2Dto = new ProgramDto();
-        program2Dto.setId_program(program2.getId_program());
-        program2Dto.setName(program2.getName());
-        program2Dto.setStart_date(program2.getStart_date());
-        program2Dto.setFinal_date(program2.getFinal_date());
-        program2Dto.setId_coach(program2.getId_program());
-        program2Dto.setName_coach(program2.getName_coach());
-        program2Dto.setDuration_day(program2.getDuration_day());
-        program2Dto.setCourse_amount(program2.getCourse_amount());
-        program2Dto.setCourse_percentage(program2.getCourse_percentage());
+        var program2Dto = programMapper.fromProgramtoProgramDto().apply(program2);
 
         var listProgramsDto = List.of(program1Dto, program2Dto);
 

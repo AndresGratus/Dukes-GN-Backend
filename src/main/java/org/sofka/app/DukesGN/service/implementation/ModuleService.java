@@ -15,7 +15,7 @@ import java.util.List;
 public class ModuleService implements IModuleService {
 
     /**
-     * Se inyecta el repositorio de de module
+     * Se inyecta el repositorio de module
      */
     @Autowired
     private ModuleRepository moduleRepository;
