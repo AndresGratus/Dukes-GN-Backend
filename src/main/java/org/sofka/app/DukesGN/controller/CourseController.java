@@ -110,6 +110,27 @@ public class CourseController {
     }
 
     /**
+     * Endpoint para listar todos los cursos
+     *
+     * @return Mono<ResponseEntity < Flux < CourseDto>>>
+     */
+
+    @GetMapping("/list")
+    public Mono<ResponseEntity<Flux<CourseDto>>> listAllCourse() {
+        try {
+            return Mono.just(
+                    ResponseEntity
+                            .ok()
+                            .contentType(MediaType.APPLICATION_JSON)
+                            .body(courseService.listCourses())
+            );
+        } catch (Exception e) {
+            throw new RuntimeException("No se pudieron listar los cursos");
+        }
+
+    }
+
+    /**
      * Endpoint para listar los course por id
      *
      * @param id_program
