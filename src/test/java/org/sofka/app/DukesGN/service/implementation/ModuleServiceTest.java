@@ -20,10 +20,15 @@ import static org.mockito.Mockito.*;
 @SpringBootTest
 class ModuleServiceTest {
 
-
+    /**
+     * Se inyecta el servicio de Module
+     */
     @Autowired
     ModuleService moduleService;
 
+    /**
+     * Se instancia el Mapper de Module
+     */
     ModuleMapper moduleMapper = new ModuleMapper();
 
     @BeforeEach
@@ -31,6 +36,9 @@ class ModuleServiceTest {
         moduleService = mock(ModuleService.class);
     }
 
+    /**
+     * Crear Modulo
+     */
     @Test
     void createModule() {
 
@@ -55,6 +63,9 @@ class ModuleServiceTest {
         verify(moduleService).createModule(moduleDto);
     }
 
+    /**
+     * Test de obtener modulo por id
+     */
     @Test
     void getModule() {
 
@@ -82,6 +93,9 @@ class ModuleServiceTest {
         verify(moduleService).getModule(moduleDto.getId_module());
     }
 
+    /**
+     * Test para listar todos los modulos
+     */
     @Test
     void listModules() {
 
@@ -105,6 +119,9 @@ class ModuleServiceTest {
         verify(moduleService).listModules();
     }
 
+    /**
+     * Test para actualizar un modulo por id
+     */
     @Test
     void updateModule() {
 
@@ -138,6 +155,9 @@ class ModuleServiceTest {
         verify(moduleService).updateModule(moduleDto.getId_module(), moduleDto);
     }
 
+    /**
+     * Test para eliminar un modulo por id
+     */
     @Test
     void deleteModule() {
 
@@ -162,6 +182,9 @@ class ModuleServiceTest {
         verify(moduleService).deleteModule(moduleDto.getId_module());
     }
 
+    /**
+     * Test para eliminar un modulo por id
+     */
     @Test
     void saveAllModule() {
 
