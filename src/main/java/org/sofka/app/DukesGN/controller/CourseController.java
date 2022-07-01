@@ -1,5 +1,7 @@
 package org.sofka.app.DukesGN.controller;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import org.sofka.app.DukesGN.dto.CourseDto;
 import org.sofka.app.DukesGN.service.implementation.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +31,8 @@ public class CourseController {
      * @param courseDto
      * @return Mono<ResponseEntity < Mono < CourseDto>>>
      */
-
+    @Operation(summary = " --> Endpoint que nos permite Crear un curso")
+    @ApiResponse(responseCode = "200", description = "Se creo el curso")
     @PostMapping("/create")
     public Mono<ResponseEntity<Mono<CourseDto>>> createCourse(@RequestBody CourseDto courseDto) {
         try {
@@ -51,6 +54,8 @@ public class CourseController {
      * @param course_id
      * @return Mono<ResponseEntity < Mono < CourseDto>>>
      */
+    @Operation(summary = " --> Endpoint que nos permite obtener un curso por id")
+    @ApiResponse(responseCode = "200", description = "Se obtuvo el curso por el id")
     @GetMapping("/get/{course_id}")
     public Mono<ResponseEntity<Mono<CourseDto>>> getCoursebyId(@PathVariable("course_id") String course_id) {
         try {
@@ -72,6 +77,8 @@ public class CourseController {
      * @return Mono<ResponseEntity < Mono < Void>>>
      */
 
+    @Operation(summary = " --> Endpoint que nos permite eliminar un curso por id")
+    @ApiResponse(responseCode = "200", description = "Se elimino el curso")
     @DeleteMapping("/delete/{course_id}")
     public Mono<ResponseEntity<Mono<Void>>> deleteCourse(@PathVariable("course_id") String course_id) {
         try {
@@ -92,6 +99,9 @@ public class CourseController {
      * @param courseDtoList
      * @return Mono<ResponseEntity < Flux < List < CourseDto>>>>
      */
+
+    @Operation(summary = " --> Endpoint que nos guardar una lista de respuestas")
+    @ApiResponse(responseCode = "200", description = "se guardo la lista de cursos")
     @PostMapping("/saveAll")
     public Mono<ResponseEntity<Flux<List<CourseDto>>>> saveAllCourse(@RequestBody List<CourseDto> courseDtoList) {
 
@@ -115,6 +125,8 @@ public class CourseController {
      * @return Mono<ResponseEntity < Flux < CourseDto>>>
      */
 
+    @Operation(summary = " --> Endpoint que nos permite listar todos los cursos")
+    @ApiResponse(responseCode = "200", description = "Se listaron los cursos")
     @GetMapping("/list")
     public Mono<ResponseEntity<Flux<CourseDto>>> listAllCourse() {
         try {
@@ -137,6 +149,8 @@ public class CourseController {
      * @return Mono<ResponseEntity < Flux < CourseDto>>>
      */
 
+    @Operation(summary = " --> Endpoint que nos permite obtener un curso por el id del programa")
+    @ApiResponse(responseCode = "200", description = "Se listo el curso por el id del programa")
     @GetMapping("/program/{id_program}")
     public Mono<ResponseEntity<Flux<CourseDto>>> getCourseByIdProgram(@PathVariable("id_program") String id_program) {
         try {

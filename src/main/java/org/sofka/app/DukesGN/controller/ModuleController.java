@@ -1,6 +1,8 @@
 package org.sofka.app.DukesGN.controller;
 
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import org.sofka.app.DukesGN.dto.ModuleDto;
 import org.sofka.app.DukesGN.service.implementation.ModuleService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +32,9 @@ public class ModuleController {
      * @param moduleDto
      * @return Mono<ResponseEntity < Mono < ModuleDto>>>
      */
+
+    @Operation(summary = " --> Endpoint que nos permite crear un modulo")
+    @ApiResponse(responseCode = "200", description = "Se creo el modulo")
     @PostMapping("/create")
     public Mono<ResponseEntity<Mono<ModuleDto>>> createModule(@RequestBody ModuleDto moduleDto) {
         try {
@@ -50,6 +55,9 @@ public class ModuleController {
      * @param module_id
      * @return Mono<ResponseEntity < Mono < ModuleDto>>>
      */
+
+    @Operation(summary = " --> Endpoint que nos permite obtener un modulo por id")
+    @ApiResponse(responseCode = "200", description = "Se obtuvo el modulo por id")
     @GetMapping("/get/{module_id}")
     public Mono<ResponseEntity<Mono<ModuleDto>>> getModuleById(@PathVariable("module_id") String module_id) {
         try {
@@ -70,6 +78,8 @@ public class ModuleController {
      * @return Mono<ResponseEntity < Flux < ModuleDto>>>
      */
 
+    @Operation(summary = " --> Endpoint que nos permite listar todos los modulos")
+    @ApiResponse(responseCode = "200", description = "Se listaron los modulos")
     @GetMapping("/list")
     public Mono<ResponseEntity<Flux<ModuleDto>>> listAllModule() {
         try {
@@ -92,6 +102,8 @@ public class ModuleController {
      * @return Mono<ResponseEntity < Mono < ModuleDto>>
      */
 
+    @Operation(summary = " --> Endpoint que nos permite actualizar un modulo por id")
+    @ApiResponse(responseCode = "200", description = "Se actualizo el modulo ")
     @PutMapping("/update/{module_id}")
     public Mono<ResponseEntity<Mono<ModuleDto>>> updateModule(@RequestBody ModuleDto moduleDto, @PathVariable("module_id") String module_id) {
         try {
@@ -113,6 +125,8 @@ public class ModuleController {
      * @return Mono<ResponseEntity < Mono < Void>>>
      */
 
+    @Operation(summary = " --> Endpoint que nos permite eliminar un modulo por id")
+    @ApiResponse(responseCode = "200", description = "Se elimino el modulo por id")
     @DeleteMapping("/delete/{module_id}")
     public Mono<ResponseEntity<Mono<Void>>> deleteModuloById(@PathVariable("module_id") String module_id) {
         try {
@@ -132,6 +146,9 @@ public class ModuleController {
      *
      * @return Mono<ResponseEntity < Flux < List < ModuleDto>>>>
      */
+
+    @Operation(summary = " --> Endpoint que nos permite guardar una lista de modulos")
+    @ApiResponse(responseCode = "200", description = "Se guardo la lista de modulos")
     @PostMapping("/saveAll")
     public Mono<ResponseEntity<Flux<List<ModuleDto>>>> saveAllModule(@RequestBody List<ModuleDto> list) {
         try {
@@ -156,6 +173,9 @@ public class ModuleController {
      * @param id_course
      * @return Mono<ResponseEntity < Flux < ModuleDto>>>
      */
+
+    @Operation(summary = " --> Endpoint que nos permite obtener un modulo por id del curso")
+    @ApiResponse(responseCode = "200", description = "Se obtuvo el modulo por id del curso")
     @GetMapping("/course/{id_course}")
     public Mono<ResponseEntity<Flux<ModuleDto>>> getModulesByIdCurso(@PathVariable("id_course") String id_course) {
         try {
