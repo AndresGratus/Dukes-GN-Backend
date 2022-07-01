@@ -22,8 +22,10 @@ Equipo 7 - Duke's: https://trello.com/b/YT3Fu29s/equipo-7-dukes
 ### Caracteristicas:
 - Conexion base de datos MongoAtlas
 - Pruebas unitarias Backend
-- Uso de Servicio-Controller
 - Uso de Swagger
+
+ ### Servicio-Controller
+![image](https://user-images.githubusercontent.com/91640921/176894496-8fc604fd-242a-4921-ae8d-fabc0ce4f352.png)
 
 ### Cómo usar:
 1. Ir a la rama "main"
