@@ -46,11 +46,11 @@ $ cd ../path/to/the/file
 ```
 > Instala las dependencias:
 ```
-$ npm install
+pom.xml
 ```
 > Correr:
 ```
-$ npm start
+Run DukesGnApplication
 ```
 
 ## General Info 🔐
