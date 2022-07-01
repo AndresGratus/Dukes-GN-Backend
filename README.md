@@ -1,16 +1,57 @@
-# Tabla de contenido
-1. [General Info](#general-info)
-2. [Tecnologias](#tecnologias)
-3. [Instalacion](#instalacion)
-4. [Colaboradores](#colaboradores)
-
 # Dukes-GN-Backend
 Backend Gestor de Notass
+
+# Tabla de contenido
+1. [Colaboradores](#colaboradores)
+2. [Tecnologias](#tecnologias)
+3. [Instalacion](#instalacion)
+4. [General Info](#general-info)
+
+
+## Colaboradores
+***
+Lista de Colaboradores
+* Andres Felipe Castañeda Lopez. Backend
+* Doris Mosquera Lozano. Backend
+* Juan Vargas. Frontend
+* Juan Toro. Full Stack
+* Santiago A. Viana. Frontend
+* Juan David Rojas QA
+* Alejandro Lopez. Scrum Master
+
+
 
 # Despliegue Heroku
 URL: https://dukes-gn-backend.herokuapp.com/api/heroku/deploy
 
 ![image](https://user-images.githubusercontent.com/47374753/175788842-123d2766-bad3-46cc-9a61-1fcdec4114b3.png)
+
+## Tecnologias
+***
+Lista de tecnologias utilizadas en el proyecto:
+* [Java](https://www.oracle.com/co/java/technologies/javase/jdk11-archive-downloads.html): Version 11
+* [Spring Boot](https://spring.io/projects/spring-boot): Version 2.7.1
+* [Spring WebFlux](spring-boot-starter-webflux)
+* [junit](https://junit.org/junit5/): Version 4.13
+
+## Instalacion
+***
+```
+Pasos para instalar 
+```
+> Clona el repositorio:
+```
+$ git clone https://github.com/AndresGratus/Dukes-GN-Backend.git
+$ cd ../path/to/the/file
+```
+> Instala las dependencias:
+```
+$ npm install
+```
+> Correr:
+```
+$ npm start
+```
 
 ## General Info
 ***
@@ -72,41 +113,9 @@ Equipo 7 - Duke's: https://trello.com/b/YT3Fu29s/equipo-7-dukes
 ### Schemas
 ![image](https://user-images.githubusercontent.com/91640921/176949050-4a5cf42a-59ef-47e2-86f3-1327f959f56a.png)
 
-## Tecnologias
-***
-Lista de tecnologias utilizadas en el proyecto:
-* [Java](https://www.oracle.com/co/java/technologies/javase/jdk11-archive-downloads.html): Version 11
-* [Spring Boot](https://spring.io/projects/spring-boot): Version 2.7.1
-* [Spring WebFlux](spring-boot-starter-webflux)
-* [junit](https://junit.org/junit5/): Version 4.13
+---
 
-## Instalacion
-***
-```
-Pasos para instalar 
-```
-> Clona el repositorio:
-```
-$ git clone https://github.com/AndresGratus/Dukes-GN-Backend.git
-$ cd ../path/to/the/file
-```
-> Instala las dependencias:
-```
-$ npm install
-```
-> Correr:
-```
-$ npm start
-```
+![Screen Shot 2022-07-01 at 10 42 55 AM](https://user-images.githubusercontent.com/90350943/176927048-51da3319-3356-4748-a9bc-a811ccb78a42.png)
 
-## Colaboradores
-***
-Lista de Colaboradores
-* Andres Felipe Castañeda Lopez. Backend
-* Doris Mosquera Lozano. Backend
-* Juan Vargas. Frontend
-* Juan Toro. Full Stack
-* Santiago A. Viana. Frontend
-* Juan David Rojas QA
-* Alejandro Lopez. Scrum Master
+
 
