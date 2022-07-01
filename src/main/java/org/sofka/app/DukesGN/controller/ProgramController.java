@@ -1,5 +1,7 @@
 package org.sofka.app.DukesGN.controller;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import org.sofka.app.DukesGN.dto.ProgramDto;
 import org.sofka.app.DukesGN.service.implementation.ProgramService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +34,8 @@ public class ProgramController {
      * @return Mono<ResponseEntity < Mono < ProgramDto>>>
      */
 
-
+    @Operation(summary = " --> Endpoint que nos permite crear un programa")
+    @ApiResponse(responseCode = "200", description = "Se guardo el programa")
     @PostMapping("/create")
     public Mono<ResponseEntity<Mono<ProgramDto>>> createProgram(@RequestBody ProgramDto programDto) {
         try {
@@ -56,6 +59,8 @@ public class ProgramController {
      * @return Mono<ResponseEntity < Mono < ProgramDto>>>
      */
 
+    @Operation(summary = " --> Endpoint que nos permite obtener el programa por el id")
+    @ApiResponse(responseCode = "200", description = "Se obtuvo el programa por el id")
     @GetMapping("/get/{program_id}")
     public Mono<ResponseEntity<Mono<ProgramDto>>> getProgramById(@PathVariable("program_id") String program_id) {
 
@@ -79,6 +84,8 @@ public class ProgramController {
      * @return Mono<ResponseEntity < Mono < String>>>
      */
 
+    @Operation(summary = " --> Endpoint que nos permite eliminar un programa por id")
+    @ApiResponse(responseCode = "200", description = "Se elimino el programa por id")
     @DeleteMapping("/delete/{program_id}")
     public Mono<ResponseEntity<Mono<Void>>> deleteProgramById(@PathVariable("program_id") String program_id) {
         try {
@@ -100,6 +107,8 @@ public class ProgramController {
      * @return Mono<ResponseEntity < Flux < ProgramDto>>>
      */
 
+    @Operation(summary = " --> Endpoint que nos permite listar todos los programas")
+    @ApiResponse(responseCode = "200", description = "Se listaron todos los programas")
     @GetMapping("/list")
     public Mono<ResponseEntity<Flux<ProgramDto>>> listAllProgram() {
         try {
@@ -119,6 +128,8 @@ public class ProgramController {
      * @return
      */
 
+    @Operation(summary = " --> Endpoint que nos permite guardar una lista de programas")
+    @ApiResponse(responseCode = "200", description = "Se guardo la lista de programas")
     @PostMapping("/saveAll")
     public Mono<ResponseEntity<Flux<List<ProgramDto>>>> saveAllProgram(@RequestBody List<ProgramDto> programDtos) {
 
@@ -135,6 +146,8 @@ public class ProgramController {
 
     }
 
+    @Operation(summary = " --> Endpoint que nos permite obtener un programa por el id del coach")
+    @ApiResponse(responseCode = "200", description = "Se obtuvo el programa por el id del coach")
     @GetMapping("/coach/{id_coach}")
     public Mono<ResponseEntity<Flux<ProgramDto>>> getProgramByIdCoach(@PathVariable("id_coach") String id_coach) {
 
