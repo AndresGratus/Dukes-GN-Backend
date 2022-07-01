@@ -16,8 +16,21 @@ heroku Url:https://dukes-gn-backend.herokuapp.com/api/heroku/deploy
 ***
 Desarrollar un MVP funcional, para gestionar y visualizar gráficamente las notas de los estudiantes matriculados en las ligas de entrenamiento de Sofka U durante su periodo académico.
 
-###Metodologia Scrum 
+### Metodologia Scrum 
 Equipo 7 - Duke's: https://trello.com/b/YT3Fu29s/equipo-7-dukes
+
+### Caracteristicas:
+- Conexion base de datos MongoAtlas
+- Pruebas unitarias Backend
+- Uso de Servicio-Controller
+- Uso de Swagger
+
+### Cómo usar:
+1. Ir a la rama "main"
+2. Clonar el repositorio o descargarlo como archivo zip(Recuerda que debes descomprimir el archivo zip).
+3. Luego de tener el proyecto en su espacio de trabajo, proceda a abrirlo en su entorno de desarrollo.
+4. Dirijase a la carpeta "/src/main/java/org/sofka/app/DukesGN/ y ejecute la clase "DukesGnApplication" (Esto hará que funcione toda la parte del backend)
+5. Para visualizar la api en Swagger, dirijase a este link desde su navegador favorito http://localhost:8080/swagger-ui.html
 
 ## Tecnologias
 ***
