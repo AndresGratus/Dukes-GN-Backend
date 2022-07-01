@@ -42,12 +42,29 @@ Equipo 7 - Duke's: https://trello.com/b/YT3Fu29s/equipo-7-dukes
 ***
 ### module-controller
 ![image](https://user-images.githubusercontent.com/91640921/176948362-b19d4a34-ff27-494b-a1e2-45a87a87a892.png)
+#### Get /api/module/list
+![image](https://user-images.githubusercontent.com/91640921/176953297-f03e5f4e-fb08-494d-9b2a-bc4518bf8d8d.png)
+#### Post api/module/create
+![image](https://user-images.githubusercontent.com/91640921/176953618-c5f51f9b-d970-4677-8ecd-82f34a082b9c.png)
+#### Put /api/module/update/{module_id}
+![image](https://user-images.githubusercontent.com/91640921/176954523-e7fe110e-c9dd-46e7-90fd-08b41ed90e3d.png)
+
 ***
 ### program-controller
 ![image](https://user-images.githubusercontent.com/91640921/176948562-23e2d755-8bc4-4289-84e2-c467e8834883.png)
+#### Post /api/program/create
+![image](https://user-images.githubusercontent.com/91640921/176952397-b0e0268e-db71-41b5-be78-69354894742d.png)
+#### Get /api/program/list
+![image](https://user-images.githubusercontent.com/91640921/176952637-25485b9a-95b1-4b3f-a282-66757510bfd2.png)
+#### Get /api/program/get/id
+![image](https://user-images.githubusercontent.com/91640921/176952972-cabad3d4-0c68-4de6-8a35-a1181279d559.png)
+
 ***
 ### course-controller
 ![image](https://user-images.githubusercontent.com/91640921/176948635-e5ac0670-13d4-41db-9c7e-74f5e9ed32d4.png)
+#### Post /api/course/create
+![image](https://user-images.githubusercontent.com/91640921/176955139-a922d9c4-b5fe-4e63-8dc9-5506c64e112a.png)
+
 ***
 ### heroku-deploy
 ![image](https://user-images.githubusercontent.com/91640921/176948753-96e9ec59-de6f-486c-a92e-21169d37371b.png)
@@ -67,9 +84,18 @@ Lista de tecnologias utilizadas en el proyecto:
 ***
 Pasos para instalar 
 ```
+> Clona el repositorio:
+
 $ git clone https://github.com/AndresGratus/Dukes-GN-Backend.git
+
 $ cd ../path/to/the/file
+
+> Instala las dependencias:
+
 $ npm install
+
+> Correr:
+
 $ npm start
 ```
 
