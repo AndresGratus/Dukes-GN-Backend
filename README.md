@@ -52,10 +52,10 @@ $ npm start
 ## Colaboradores
 ***
 Lista de Colaboradores
-* Andres Felipe Castañeda Lopez
-* Doris Mosquera Lozano.
-* Juan Vargas.
-* Juan Toro.
-* Santiago A. Viana.
-* Juan David Rojas
+* Andres Felipe Castañeda Lopez. Backend
+* Doris Mosquera Lozano. Backend
+* Juan Vargas. Frontend
+* Juan Toro. Full Stack
+* Santiago A. Viana. Frontend
+* Juan David Rojas QA
 
