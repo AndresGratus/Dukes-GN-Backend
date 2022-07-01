@@ -40,6 +40,7 @@ Equipo 7 - Duke's: https://trello.com/b/YT3Fu29s/equipo-7-dukes
 ## Tecnologias
 ***
 Lista de tecnologias utilizadas en el proyecto:
+* [Java](https://www.oracle.com/co/java/technologies/javase/jdk11-archive-downloads.html): Version 11
 * [Spring Boot](https://spring.io/projects/spring-boot): Version 2.7.1
 * [Spring WebFlux](spring-boot-starter-webflux)
 * [junit](https://junit.org/junit5/): Version 4.13
