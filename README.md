@@ -37,6 +37,24 @@ Equipo 7 - Duke's: https://trello.com/b/YT3Fu29s/equipo-7-dukes
 4. Dirijase a la carpeta "/src/main/java/org/sofka/app/DukesGN/ y ejecute la clase "DukesGnApplication" (Esto hará que funcione toda la parte del backend)
 5. Para visualizar la api en Swagger, dirijase a este link desde su navegador favorito http://localhost:8080/swagger-ui.html
 
+### Swagger
+![image](https://user-images.githubusercontent.com/91640921/176948261-3d9cb55a-c2c5-4ff5-b35c-d083c52e423a.png)
+***
+### module-controller
+![image](https://user-images.githubusercontent.com/91640921/176948362-b19d4a34-ff27-494b-a1e2-45a87a87a892.png)
+***
+### program-controller
+![image](https://user-images.githubusercontent.com/91640921/176948562-23e2d755-8bc4-4289-84e2-c467e8834883.png)
+***
+### course-controller
+![image](https://user-images.githubusercontent.com/91640921/176948635-e5ac0670-13d4-41db-9c7e-74f5e9ed32d4.png)
+***
+### heroku-deploy
+![image](https://user-images.githubusercontent.com/91640921/176948753-96e9ec59-de6f-486c-a92e-21169d37371b.png)
+***
+### Schemas
+![image](https://user-images.githubusercontent.com/91640921/176949050-4a5cf42a-59ef-47e2-86f3-1327f959f56a.png)
+
 ## Tecnologias
 ***
 Lista de tecnologias utilizadas en el proyecto:
