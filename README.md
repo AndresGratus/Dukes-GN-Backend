@@ -82,20 +82,20 @@ Lista de tecnologias utilizadas en el proyecto:
 
 ## Instalacion
 ***
+```
 Pasos para instalar 
 ```
 > Clona el repositorio:
-
+```
 $ git clone https://github.com/AndresGratus/Dukes-GN-Backend.git
-
 $ cd ../path/to/the/file
-
+```
 > Instala las dependencias:
-
+```
 $ npm install
-
+```
 > Correr:
-
+```
 $ npm start
 ```
 
