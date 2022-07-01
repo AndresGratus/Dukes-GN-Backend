@@ -1,4 +1,4 @@
-# Dukes-GN-Backend
+# Dukes-GN-Backend 
 Backend Gestor de Notass
 
 # Tabla de contenido
@@ -34,7 +34,7 @@ Lista de tecnologias utilizadas en el proyecto:
 * [Spring WebFlux](spring-boot-starter-webflux)
 * [junit](https://junit.org/junit5/): Version 4.13
 
-## Instalacion
+## Instalacion 🏄
 ***
 ```
 Pasos para instalar 
@@ -53,7 +53,7 @@ $ npm install
 $ npm start
 ```
 
-## General Info
+## General Info 🔐
 ***
 Desarrollar un MVP funcional, para gestionar y visualizar gráficamente las notas de los estudiantes matriculados en las ligas de entrenamiento de Sofka U durante su periodo académico.
 
