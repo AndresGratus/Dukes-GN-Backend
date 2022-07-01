@@ -65,8 +65,10 @@ Equipo 7 - Duke's: https://trello.com/b/YT3Fu29s/equipo-7-dukes
 - Pruebas unitarias Backend
 - Uso de Swagger
 
- ### Servicio-Controller
+### Servicio-Controller
 ![image](https://user-images.githubusercontent.com/91640921/176894496-8fc604fd-242a-4921-ae8d-fabc0ce4f352.png)
+  ### Pom.xml
+  ![image](https://user-images.githubusercontent.com/91640921/176960770-30c4a6bc-1675-4641-8663-3224f7e7fc2c.png)
 ### Test 
 ![image](https://user-images.githubusercontent.com/91640921/176896293-18b104f0-fbc7-4d36-b93b-66149b877448.png)
 
@@ -76,7 +78,7 @@ Equipo 7 - Duke's: https://trello.com/b/YT3Fu29s/equipo-7-dukes
 2. Clonar el repositorio o descargarlo como archivo zip(Recuerda que debes descomprimir el archivo zip).
 3. Luego de tener el proyecto en su espacio de trabajo, proceda a abrirlo en su entorno de desarrollo.
 4. Dirijase a la carpeta "/src/main/java/org/sofka/app/DukesGN/ y ejecute la clase "DukesGnApplication" (Esto hará que funcione toda la parte del backend)
-5. Para visualizar la api en Swagger, dirijase a este link desde su navegador favorito https://dukes-gn-backend.herokuapp.com/webjars/swagger-ui/index.html
+5. Para visualizar la api en Swagger, dirijase a este link desde su navegador favorito http://localhost:8080/swagger-ui.html
 
 ### Swagger
 ![image](https://user-images.githubusercontent.com/91640921/176948261-3d9cb55a-c2c5-4ff5-b35c-d083c52e423a.png)
