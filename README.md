@@ -26,6 +26,9 @@ Equipo 7 - Duke's: https://trello.com/b/YT3Fu29s/equipo-7-dukes
 
  ### Servicio-Controller
 ![image](https://user-images.githubusercontent.com/91640921/176894496-8fc604fd-242a-4921-ae8d-fabc0ce4f352.png)
+### Test 
+![image](https://user-images.githubusercontent.com/91640921/176896293-18b104f0-fbc7-4d36-b93b-66149b877448.png)
+
 
 ### Cómo usar:
 1. Ir a la rama "main"
