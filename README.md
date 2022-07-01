@@ -57,4 +57,5 @@ Lista de Colaboradores
 * Juan Vargas.
 * Juan Toro.
 * Santiago A. Viana.
+* Juan David Rojas
 
