@@ -58,4 +58,5 @@ Lista de Colaboradores
 * Juan Toro. Full Stack
 * Santiago A. Viana. Frontend
 * Juan David Rojas QA
+* Alejandro Lopez. Scrum Master
 
